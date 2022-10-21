@@ -1,0 +1,52 @@
+@import './css/variables.css';
+@import './css/colors.css';
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html{
+  font-size: 62.5%;
+}
+#app{
+  font-size: var(--body-text);
+  /* background-color: #0D121B; */
+  background-color: var(--bg);
+  width: 100vw;
+  height: fit-content;
+}
+header{
+  display: flex;
+}
+header * {
+  margin: 2rem auto;
+  color: var(--text);
+}
+
+.interfazPaises-Container{
+  display: grid;
+  grid-template-columns: repeat(3, 170px);
+  gap: 2rem;
+}
+
+/*-------------Componente card--------------*/
+.card{
+  min-width: 170px;
+  width: 170px;
+  border: 2px solid var(--accent);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.container-bandera,
+.bandera{
+  width: 100%;
+  height: 10rem;
+}
+
+.container-info{
+  margin-top: 1rem;
+}
