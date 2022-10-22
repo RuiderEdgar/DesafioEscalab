@@ -27,18 +27,20 @@ header * {
 
 .interfazPaises-Container{
   display: grid;
-  grid-template-columns: repeat(3, 170px);
-  gap: 2rem;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, 170px);
+  gap: 1.5rem;
+  justify-items: center;
+  place-content: center;
 }
 
 /*-------------Componente card--------------*/
 .card{
-  min-width: 170px;
-  width: 170px;
   border: 2px solid var(--accent);
   padding: 1rem;
   display: flex;
   flex-direction: column;
+  margin-bottom: 2rem;
 }
 
 .container-bandera,
@@ -49,4 +51,12 @@ header * {
 
 .container-info{
   margin-top: 1rem;
+}
+.container-info h2{
+  color: var(--text);
+  text-align: center;
+}
+.container-info div{
+  color: var(--details-color);
+  font-weight: bold;
 }
