@@ -13,6 +13,16 @@ export const interfazPaises = () => {
 
   paises()
     .then(array => {
+      document.querySelector('.interfazPaises-Container').classList.remove('cargando')
+      document.querySelector('.spinner').classList.add('visuallyhidden');
+      document.querySelector('.spinner').addEventListener('transitionend', () => {
+        document.querySelector('.spinner').classList.add('hidden');
+      }, {
+        capture: false,
+        once: true,
+        passive: false
+      });
+
       document.querySelector('.interfazPaises-Container').innerHTML = (
         array.map((pais) => {
           return (
@@ -20,6 +30,11 @@ export const interfazPaises = () => {
           )
         }).join('')
       )
+      document.querySelectorAll('.card').forEach(dom => {
+        dom.style.opacity = 1;
+      })
     })
     .catch(e => console.log(e))
+
+  return '';
 }

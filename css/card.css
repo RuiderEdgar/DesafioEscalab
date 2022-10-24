@@ -8,8 +8,12 @@
     margin-bottom: 2rem;
     border-radius: 6px;
     width: 100%;
+    transition: all 1s linear;
+    opacity: 0;
 }
-
+.visibilityCard{
+    opacity: 1;
+}
 /*-------bandera----------*/
 .container-bandera,
 .bandera{
