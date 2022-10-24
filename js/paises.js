@@ -1,4 +1,5 @@
-import { cardPais } from './card'
+import { cardPais } from '../components/card'
+import { detailsPais } from './details'
 export const interfazPaises = () => {
 
   //funcion asyn para el fetch
@@ -27,14 +28,18 @@ export const interfazPaises = () => {
       //-----------------------------------------------------------------
 
       document.querySelector('.interfazPaises-Container').innerHTML = (
-        array.map((pais) => {
+        array.map((pais, i) => {
           return (
-            cardPais(pais.flags.png, pais.name.common, pais.capital, pais.population, pais.region)
+            cardPais(pais.flags.png, pais.name.common, pais.capital, pais.population, pais.region, i)
           )
         }).join('')
       )
       document.querySelectorAll('.card').forEach(dom => {
         dom.style.opacity = 1;
+      })
+      //dandole un evento al boton tipo click por cada card para mostrar el pais
+      document.querySelectorAll('.btn-details').forEach((button, i) => {
+        button.addEventListener('click', () => detailsPais(i))
       })
     })
     .catch(e => console.log(e))

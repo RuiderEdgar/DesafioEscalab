@@ -9,4 +9,8 @@ document.querySelector('#app').innerHTML = `
     <div class='spinner'></div>
     ${interfazPaises()}
   </section >
+  <section class='detailsPaises-Container cargando' >
+    <div class='spinner'></div>
+    
+  </section >
   `;

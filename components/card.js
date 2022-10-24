@@ -1,14 +1,13 @@
 import '../css/card.css'
-export const cardPais = (bandera, nombre, capital, population, region) => {
+export const cardPais = (bandera, nombre, capital, population, region, i) => {
     // componente card
-    //todo dar un id por cada pais ya sea por nombre o numero
     return (
-        `<section class='card'>
+        `<section class='card' id='${nombre}'>
             <figure class='container-bandera'>
                 <img src="${bandera}" alt="bandera" class='bandera'/>
             </figure>
             <article class='container-info'>
-                <h2>${nombre}</h2>
+                <h2 id='${i}'>${nombre}</h2>
                 <div>
                     <p><span>Capital: </span>${capital}</p>
                     <p><span>Population: </span>${population}</p>
@@ -16,7 +15,7 @@ export const cardPais = (bandera, nombre, capital, population, region) => {
                 </div>
             </article>
             <div class='container-boton'>
-                <button>Ver mas</button>
+                <button class='btn-details'>Ver mas</button>            
             </div>
         </section>`
     )
