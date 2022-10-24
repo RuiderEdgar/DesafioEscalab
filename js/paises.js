@@ -16,7 +16,7 @@ export const interfazPaises = () => {
       document.querySelector('.interfazPaises-Container').innerHTML = (
         array.map((pais) => {
           return (
-            cardPais(pais.flags.svg, pais.name.common, pais.capital, pais.population, pais.region)
+            cardPais(pais.flags.png, pais.name.common, pais.capital, pais.population, pais.region)
           )
         }).join('')
       )

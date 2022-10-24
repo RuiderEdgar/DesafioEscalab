@@ -30,3 +30,8 @@
         --large: 4.8rem;
     }
 }
+@media (min-width: 993px){
+    :root {
+        --subtitle: 2.8rem;
+    }
+}

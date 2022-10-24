@@ -1,0 +1,112 @@
+
+/*-------------Componente card--------------*/
+.card{
+    border: 2px solid var(--accent);
+    padding: 0.6rem;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    border-radius: 6px;
+    width: 100%;
+}
+
+/*-------bandera----------*/
+.container-bandera,
+.bandera{
+width: 100%;
+height: 10rem;
+}
+
+.container-info{
+margin-top: 0.5rem;
+display: flex;
+flex-direction: column;
+}
+
+.container-info h2{
+color: var(--accent);
+text-align: center;
+font-size: var(--subtitle);
+margin-bottom: 1rem;
+}
+
+.container-info div p{
+    display: flex;
+    color: var(--text);
+    text-overflow: ellipsis;
+    margin: 0.7rem 0 0.7rem;
+}
+
+.container-info div p span{
+color: var(--details-color);
+font-weight: bold;
+margin-right: 0.5rem;
+}
+.container-boton{
+    display: flex;
+    flex-direction: column-reverse;
+    height: 100%;
+}
+.container-boton button{
+    margin: 1rem auto 0.5rem;
+    width: 100%;
+    cursor: pointer;
+    border: 2px solid var(--button-color);
+    border-radius: 5px;
+    color: var(--button-color);
+    font-weight: bold;
+    font-size: var(--body-text);
+    background: transparent;
+    padding: 1rem;
+    transition: all;
+    transition-duration: 200ms;
+    transition-delay: 130ms;
+}
+
+.container-boton button:hover{
+    transform: translateY(-5px) scale(1.02, 1.02);
+    background-color: var(--button-color);
+    color: var(--details-color);
+}
+
+@media (min-width: 993px) and (max-width: 1199px){
+    .container-bandera,
+    .bandera{
+        width: 100%;
+        height: 15rem;
+    }
+    .container-info div{
+        display: flex;
+        flex-direction: column;
+    }
+    .container-info div p{
+        margin: 0.7rem auto 0.7rem;
+    }
+    .container-info div p span{
+        margin-right: 1rem;
+    }
+    .container-info h2{
+        margin: 1rem 0;
+    }
+  }
+
+  @media (min-width: 1200px){
+    .container-bandera,
+    .bandera{
+        width: 100%;
+        height: 15rem;
+    }
+    .container-info div{
+        display: flex;
+        flex-direction: column;
+    }
+    .container-info div p{
+        margin: 0.7rem auto 0.7rem;
+    }
+    .container-info div p span{
+        margin-right: 1rem;
+    }
+    .container-info h2{
+        margin: 1rem 0;
+    }
+  }

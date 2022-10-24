@@ -1,3 +1,4 @@
+import '../css/card.css'
 export const cardPais = (bandera, nombre, capital, population, region) => {
     // console.log(nombre)
     return (
@@ -8,12 +9,14 @@ export const cardPais = (bandera, nombre, capital, population, region) => {
             <article class='container-info'>
                 <h2>${nombre}</h2>
                 <div>
-                    <p>Capital: ${capital}</p>
-                    <p>Population: ${population}</p>
-                    <p>Region: ${region}</p>
+                    <p><span>Capital: </span>${capital}</p>
+                    <p><span>Population: </span>${population}</p>
+                    <p><span>Region: </span>${region}</p>
                 </div>
-                <button>Ver mas</button>
             </article>
+            <div class='container-boton'>
+                <button>Ver mas</button>
+            </div>
         </section>`
     )
 }
