@@ -1,6 +1,7 @@
 import { cardPais } from './card'
 export const interfazPaises = () => {
 
+  //funcion asyn para el fetch
   async function paises() {
     let response = await fetch('https://restcountries.com/v3.1/all')
     if (!response.ok) {
@@ -13,6 +14,7 @@ export const interfazPaises = () => {
 
   paises()
     .then(array => {
+      //quitando el loading spinner trantandolo de hacer con animacion
       document.querySelector('.interfazPaises-Container').classList.remove('cargando')
       document.querySelector('.spinner').classList.add('visuallyhidden');
       document.querySelector('.spinner').addEventListener('transitionend', () => {
@@ -22,6 +24,7 @@ export const interfazPaises = () => {
         once: true,
         passive: false
       });
+      //-----------------------------------------------------------------
 
       document.querySelector('.interfazPaises-Container').innerHTML = (
         array.map((pais) => {
@@ -35,6 +38,6 @@ export const interfazPaises = () => {
       })
     })
     .catch(e => console.log(e))
-
+  //retornando un string vacio para que no muestre undefined
   return '';
 }

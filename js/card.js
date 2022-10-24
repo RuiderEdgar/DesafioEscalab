@@ -1,6 +1,7 @@
 import '../css/card.css'
 export const cardPais = (bandera, nombre, capital, population, region) => {
-    // console.log(nombre)
+    // componente card
+    //todo dar un id por cada pais ya sea por nombre o numero
     return (
         `<section class='card'>
             <figure class='container-bandera'>
