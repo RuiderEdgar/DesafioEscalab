@@ -1,3 +1,4 @@
+import { paisDetails } from "../components/pais";
 export const detailsPais = (i) => {
     const nombrePais = document.getElementById(i).innerHTML;
     console.log(nombrePais);
@@ -17,10 +18,15 @@ export const detailsPais = (i) => {
     pais()
         .then(array => {
             console.log(array);
-            document.querySelector('.detailsPaises-Container').innerHTML = '';
+            console.log(Object.values(array[0]));
+            document.querySelector('.detailsPaises-Container').innerHTML = (
+                array.map((pais, i) => {
+                    return (
+                        paisDetails(pais.name.common, pais.capital, pais.region, Object.values(pais.languages), pais.borders, pais.flags.png, pais.population, pais.timezones, pais.coatOfArms.png)
+                    )
+                })
+            );
             //name.common, capital ¿[0]?, region, lenguages, borders, flags.png, population, timezones[], coarOfArms.png
         })
-    return (`
-        
-    `)
+    return '';
 }

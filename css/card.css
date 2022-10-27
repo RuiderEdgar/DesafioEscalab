@@ -1,4 +1,3 @@
-
 /*-------------Componente card--------------*/
 .card{
     border: 2px solid var(--accent);
@@ -35,8 +34,8 @@ margin-bottom: 1rem;
 }
 
 .container-info div p{
-    display: flex;
     color: var(--text);
+    overflow: hidden;
     text-overflow: ellipsis;
     margin: 0.7rem 0 0.7rem;
 }
