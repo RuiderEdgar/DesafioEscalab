@@ -1,7 +1,6 @@
 import { paisDetails } from "../components/cardPaisDetails";
 export const detailsPais = (i) => {
     const nombrePais = document.getElementById(i).innerHTML;
-    console.log(nombrePais);
     document.querySelector('.detailsPaises-Container').style.display = 'flex';
     document.querySelector('.interfazPaises-Container').style.opacity = 0;
     document.querySelector('.interfazPaises-Container').classList.add('hidden');
@@ -17,8 +16,6 @@ export const detailsPais = (i) => {
     }
     pais()
         .then(array => {
-            console.log(array);
-            console.log(Object.values(array[0]));
             document.querySelector('.detailsPaises-Container').innerHTML = (
                 array.map((pais, i) => {
                     return (
@@ -28,6 +25,9 @@ export const detailsPais = (i) => {
             );
             const btnRegresar = document.querySelector('#regresar');
             btnRegresar.addEventListener('click', () => {
+                const containerDetails = document.querySelector('.detailsPaises-Container');
+                const cardDetails = document.querySelector('.cardPaisDetails');
+                containerDetails.removeChild(cardDetails)
                 document.querySelector('.detailsPaises-Container').style.display = 'none';
                 document.querySelector('.interfazPaises-Container').style.opacity = 1;
                 document.querySelector('.interfazPaises-Container').classList.remove('hidden');
