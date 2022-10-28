@@ -1,4 +1,4 @@
-import { paisDetails } from "../components/pais";
+import { paisDetails } from "../components/cardPaisDetails";
 export const detailsPais = (i) => {
     const nombrePais = document.getElementById(i).innerHTML;
     console.log(nombrePais);
@@ -26,7 +26,12 @@ export const detailsPais = (i) => {
                     )
                 })
             );
-            //name.common, capital ¿[0]?, region, lenguages, borders, flags.png, population, timezones[], coarOfArms.png
+            const btnRegresar = document.querySelector('#regresar');
+            btnRegresar.addEventListener('click', () => {
+                document.querySelector('.detailsPaises-Container').style.display = 'none';
+                document.querySelector('.interfazPaises-Container').style.opacity = 1;
+                document.querySelector('.interfazPaises-Container').classList.remove('hidden');
+            });
         })
     return '';
 }

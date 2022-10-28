@@ -72,6 +72,10 @@ header * {
 
 .detailsPaises-Container{
   display: none;
+  min-height: 100vh;
+  height: fit-content;
+  max-height: fit-content;
+  flex-direction: column;
 }
 
 .detailsPaises-Container .spinner{

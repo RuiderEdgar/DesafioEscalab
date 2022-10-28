@@ -1,0 +1,123 @@
+/*-----------button-----------*/
+#regresar{
+    margin: 1rem auto 2rem;
+    min-width: 32rem;
+    width: 90%;
+    max-width: 40rem;
+    cursor: pointer;
+    border: 2px solid var(--button-color);
+    border-radius: 5px;
+    color: var(--button-color);
+    font-weight: bold;
+    font-size: var(--body-text);
+    background: transparent;
+    padding: 1rem;
+    transition: all;
+    transition-duration: 200ms;
+    transition-delay: 130ms;
+}
+
+#regresar:hover{
+    transform: translateY(-5px) scale(1.02, 1.02);
+    background-color: var(--button-color);
+    color: var(--details-color);
+}
+/*-------------Componente pais--------------*/
+.cardPaisDetails{
+    margin: 0 auto 4rem;
+    display: flex;
+    flex-direction: column;
+    border: 4px solid var(--accent);
+    border-radius: 7px;
+    height: fit-content;
+    min-width: 32rem;
+    width: 90%;
+    max-width: 40rem;
+}
+
+/*---------header---------*/
+.header-details{
+    border-bottom: 4px solid var(--accent);
+    height: fit-content;
+    display: flex;
+}
+.header-details h2{
+    margin: 0.5rem auto;
+    text-align: center;
+}
+
+/*---------bandera----------*/
+.container-banderaDetails{
+    margin: 1rem auto;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+}
+.banderaDetails{
+    margin: 0 auto;
+    min-width: 30rem;
+    width: 95%;
+    max-width: 40rem;
+}
+
+/*------main------------*/
+.container-infoDetails{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.container-escudo{
+    width: 16rem;
+    height: 16rem;
+    display: flex;
+    margin: 0 auto;
+}
+.escudo{
+    width: 15rem;
+    height: 16rem;
+    margin: auto;
+}
+#sinEscudo{
+    margin: auto;
+    font-weight: bold;
+}
+.container-infoDetails .container-info{
+    width: 50%;
+    display: flex;
+    margin: 0 auto 1rem;
+}
+.container-infoDetails .container-info p{
+    color: var(--text);
+    margin: 0.5rem;
+    overflow-wrap: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.container-infoDetails article p span{
+    margin-right: 0.5rem;
+    color: var(--details-color);
+    font-weight: bold;
+}
+
+.divisor {
+    border-right: 2px solid var(--accent);
+}
+
+@media (min-width: 768px){
+    .cardPaisDetails{
+        min-width: 32rem;
+        width: 90%;
+        max-width: 50rem;
+    }
+    .container-infoDetails .divisor p{
+        margin: 1rem auto;
+        display: flex;
+    }
+    #regresar{
+        margin: 1rem auto 2rem;
+        min-width: 32rem;
+        width: 90%;
+        max-width: 50rem;
+    }
+}

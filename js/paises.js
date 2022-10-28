@@ -1,4 +1,4 @@
-import { cardPais } from '../components/card'
+import { cardPais } from '../components/cardPais'
 import { detailsPais } from './details'
 export const interfazPaises = () => {
 

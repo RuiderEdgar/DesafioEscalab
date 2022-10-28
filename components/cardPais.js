@@ -1,4 +1,4 @@
-import '../css/card.css'
+import '../css/cardPais.css'
 export const cardPais = (bandera, nombre, capital, population, region, i) => {
     // componente card
     return (

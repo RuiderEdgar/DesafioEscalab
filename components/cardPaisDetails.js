@@ -1,4 +1,5 @@
-import '../css/pais.css'
+import '../css/cardPaisDetails.css'
+// import { backButton } from '../js/regresar';
 export const paisDetails = (nombrePais, capital, region, lenguaje, auxFronteras, bandera, population, timeZones, escudoArms) => {
     //Para los paises que no tienen fronteras
     const fronteras = auxFronteras === undefined ? 'Sin fronteras' : auxFronteras.join(', ');
@@ -19,6 +20,7 @@ export const paisDetails = (nombrePais, capital, region, lenguaje, auxFronteras,
         }
     }
     return (`
+        <button id='regresar'>Regresar</button>
         <section class='cardPaisDetails'>
             <header class='header-details'>
                 <h2>${nombrePais}</h2>
