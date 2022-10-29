@@ -6,7 +6,7 @@ export const cardPais = (bandera, nombre, capital, population, region, i) => {
             <figure class='container-bandera'>
                 <img src="${bandera}" alt="bandera" class='bandera'/>
             </figure>
-            <article class='container-info'>
+            <article class='container-info' id='${region}'>
                 <h2 id='${i}'>${nombre}</h2>
                 <div>
                     <p><span>Capital: </span>${capital}</p>
