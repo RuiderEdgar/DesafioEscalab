@@ -8,21 +8,29 @@ document.querySelector('#app').innerHTML = `
   <header>
     <h1>Paises del mundo</h1>
   </header>
-  <nav>
-    <input type="search" name="buscar" id="buscar" placeholder='Ingresa el pais'/>
-    <button id='borrar'>Borrar</button>
-    <label htmlFor="regions">
-      <span>Region</span>
-      <select name="regions" id="region">
-        <option value="all">All</option>
-        <option value="Africa">Africa</option>
-        <option value="Americas">Americas</option>
-        <option value="Asia">Asia</option>
-        <option value="Europe">Europe</option>
-        <option value="Oceania">Oceania</option>
-      </select>
-    </label>
-    <button id='btnFiltrarRegion'>Filtrar</button>
+  <nav id='nav'>
+    <section class='container-buscar'>
+      <input type="text" name="buscar" id="buscar" placeholder='Ingresa el pais'/>
+      <button id='borrar' class='unstyle'>
+        <img src="https://cdn-icons-png.flaticon.com/512/8167/8167519.png" alt="icon trash" />
+      </button>
+    </section>
+    <section class='container-filtrar'>
+      <label htmlFor="regions">
+        <span>Region</span>
+        <select name="regions" id="region" class='inputRegion'>
+          <option value="all">All</option>
+          <option value="Africa">Africa</option>
+          <option value="Americas">America</option>
+          <option value="Asia">Asia</option>
+          <option value="Europe">Europe</option>
+          <option value="Oceania">Oceania</option>
+        </select>
+      </label>
+      <button id='btnFiltrarRegion' class='unstyle'>
+        <img src="https://cdn-icons-png.flaticon.com/512/8467/8467740.png" alt="icon filtrar" />
+      </button>
+    </section>
   </nav>
   <section class='interfazPaises-Container cargando' >
     <div class='spinner'></div>

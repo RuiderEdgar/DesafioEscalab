@@ -6,4 +6,5 @@
     --button-color: rgb(236, 233, 42);
     --fondo-spinner: rgba(148, 148, 148, 0.185);
     --spin: rgb(173, 10, 146);
+    --box-shadow: 0px 2px 10px rgba(8, 9, 10, 0.3), 0px 4px 20px rgba(0, 0, 0, 0.4);
 }

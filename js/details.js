@@ -4,6 +4,7 @@ export const detailsPais = (i) => {
     document.querySelector('.detailsPaises-Container').style.display = 'flex';
     document.querySelector('.interfazPaises-Container').style.opacity = 0;
     document.querySelector('.interfazPaises-Container').classList.add('hidden');
+    document.querySelector('#nav').style.display = 'none';
 
     async function pais() {
         let response = await fetch(`https://restcountries.com/v3.1/name/${nombrePais}?fullText=true`);
@@ -31,6 +32,7 @@ export const detailsPais = (i) => {
                 document.querySelector('.detailsPaises-Container').style.display = 'none';
                 document.querySelector('.interfazPaises-Container').style.opacity = 1;
                 document.querySelector('.interfazPaises-Container').classList.remove('hidden');
+                document.querySelector('#nav').style.display = 'flex';
             });
         })
     return '';
